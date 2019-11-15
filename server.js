@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 // ds053978.mlab.com:53978/heroku_g4jmjlqw
 
 
-MongoClient.connect('mongodb://heroku_g4jmjlqw:MHd2c6cDcGp8xLbmDjGHkevb096bL0V6@ds053978.mlab.com:53978/heroku_g4jmjlqw', {
+MongoClient.connect(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

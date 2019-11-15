@@ -28,7 +28,7 @@ MongoClient.connect(process.env.MONGODB_URI, {
     })
     .then((client) => {
         console.log('database started');
-        const db = client.db('form_database');
+        const db = client.db('heroku_g4jmjlqw');
         const formCollection = db.collection('formCollection');
         const formRouter = createRouter(formCollection);
         app.use('/', formRouter);
